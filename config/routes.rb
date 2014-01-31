@@ -1,6 +1,7 @@
 MeNow::Application.routes.draw do
   get "simple_pages/home"
   get "simple_pages/help"
+  get "simple_pages/about"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
