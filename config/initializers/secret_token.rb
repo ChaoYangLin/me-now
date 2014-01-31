@@ -23,4 +23,4 @@ end
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-MeNow::Application.config.secret_key_base = '6bd1d18c603f5ce8660749619950741dbbd62710c2099266da65e0b2ad377fb7d8621243723da2b5614489b2cfc81726e893c04e804af2c32609a0942371cd49'
+MeNow::Application.config.secret_key_base = secure_token
