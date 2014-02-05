@@ -8,11 +8,17 @@ describe "SimplePages" do
       expect(page).to have_content('Web App')
     end
     
-    it "should have the title 'Home'" do
+    it "should have the base title" do
       visit '/simple_pages/home'
-      expect(page).to have_title('Home')
+      expect(page).to have_title('Me-Now')
+    end
+      
+    it "should not have a custom page title" do
+      visit '/simple_pages/home'
+      expect(page).not_to have_title('| Home')
     end
   end
+  
   
     describe "Help page" do
     it "should have the content 'Help'" do
@@ -25,6 +31,7 @@ describe "SimplePages" do
       expect(page).to have_title('Help')
     end
   end
+  
   
     describe "About page" do
     it "should have the content 'About me-now'" do
