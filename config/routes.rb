@@ -1,7 +1,12 @@
 MeNow::Application.routes.draw do
-  get "simple_pages/home"
-  get "simple_pages/help"
-  get "simple_pages/about"
+  get "users/new"
+  
+  root 'simple_pages#home'
+  match '/signup', to: 'users#new', via:'get'
+  match '/help', to: 'simple_pages#help', via:'get'
+  match '/about', to: 'simple_pages#about', via:'get'
+  match '/contact', to: 'simple_pages#contact', via:'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
