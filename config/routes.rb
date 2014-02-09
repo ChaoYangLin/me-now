@@ -1,6 +1,7 @@
 MeNow::Application.routes.draw do
   get "users/new"
   
+  root 'simple_pages#home'
   match '/', to: 'simple_pages#home', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
   match '/help', to: 'simple_pages#help', via: 'get'

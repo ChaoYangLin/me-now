@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
   
-  before { @user = User.new(name: "Guest User", email: "7chao.yang@gmail.com") }
+  before { @user = User.new(name: "Guest User", email: "guest@user.com") }
   
   subject { @user }
   
@@ -51,7 +51,7 @@ describe User do
     before do
       user_with_same_email = @user.dup
       user_with_same_email.email = @user.email.upcase
-      user_with_same_eamil.save
+      user_with_same_email.save
     end
     
     it { should_not be_valid }
